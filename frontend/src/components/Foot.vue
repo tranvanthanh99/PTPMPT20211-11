@@ -3,7 +3,7 @@
      <div class="container">
        <div class="row">
          <div class="col">
-          <p class="text-muted">RU102PY: Redis for Python Developers</p></div>
+          <p class="text-muted">Solar Site Map</p></div>
        </div>
      </div>
    </footer>

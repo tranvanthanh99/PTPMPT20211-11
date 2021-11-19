@@ -2,8 +2,8 @@
   <nav id="main" class="navbar navbar-expand-lg navbar-light bg-dark">
     <div class="container">
 
-    <img class="navbar-brand" src="/static/img/redis-u-small.png" />
-    <a class="navbar-brand text-white" href="#">Solar Power Dashboard</a>
+    <img class="navbar-brand" style = "height:25px" src="/static/img/redis-u-small.png" />
+    <a class="navbar-brand text-white" href="#" style = "height:none">Solar Power Dashboard</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

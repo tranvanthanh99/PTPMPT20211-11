@@ -1,6 +1,6 @@
 # dashboard
 
-> Front-end dashboard for RediSolar
+> Front-end dashboard for Solar Site Map
 
 ## Build Setup
 
