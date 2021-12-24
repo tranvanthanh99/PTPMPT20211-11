@@ -1,0 +1,57 @@
+services:
+  database:
+    container_name: pg_database
+    image: postgres:latest
+    restart: always
+    networks:
+     - local
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./volumes/postgresql:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: 123456
+
+  nginx:
+    image: nginx:mainline-alpine
+    container_name: nginx
+    networks:
+     - local
+    ports:
+      - "80:80"
+      - "443:443"
+  
+  appserver:
+    build: 
+      context: /server/
+      dockerfile: /server/Dockerfile
+    container_name: .PTPMPT
+    hostname: appserver
+    volumes:
+      - ./volumes/appserver/public:/server/public
+    command: 
+      - sh
+      - -c
+      - node build/index.js && tail -f /dev/null
+    networks:
+      - local
+    ports:
+      - "3333:3333"
+
+  webapp:
+    build: 
+      context: /app/
+      dockerfile: /app/Dockerfile
+    container_name: .PTPMPT
+    hostname: webapp
+    command: 
+      - sh
+      - -c
+      - npm run start
+    networks:
+      - local
+    ports:
+      - "3000:3000"
+networks:
+  local:
+    driver: bridge
